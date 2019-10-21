@@ -1,0 +1,117 @@
+<div class="landingResults">
+    <div class="headerResult">
+        <h5 class="txtwhite">Your domain search:</h5>
+    </div>
+    <form class="userSearchInput userSearchInputNext" action="/result">
+        <div class="form-group">
+            <div class="search">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">www.</span>
+                    </div>
+                    <input type="text" class="form-control" name="domainSearch" value="{{domainName}}"
+                        aria-label="domainSearchQuery" aria-describedby="basic-addon1">
+                </div>
+            </div>
+        </div>
+        <button class="" onclick="test()" type="submit">New Search</button>
+    </form>
+</div>
+<h1 id="sectionHeader">Primary search results:</h1>
+<hr class="divider">
+<div class="results">
+    <div class="domainQueryMain result">
+        <div class="card">
+            {{#if bestQueryResult.availableHB}}
+            <h5 class="card-header">Your searchterm <em>{{domainStl}}<strong>.{{bestDomainTld}}</strong></em> is available</h5>
+            {{else}}
+            <h5 class="card-header">Your searchterm <em>{{domainStl}}<strong>.{{bestDomainTld}}</strong></em> is currently not available</h5>
+            {{/if}}
+            <div class="card">
+                <div class="card-body">
+                    {{#if bestQueryResult.availableHB}}
+                    <div class="dealer">
+                        <p class="card-text">Best Dealer:</p>
+                        <h6 class="card-text">{{bestQueryResult.name}}</h6>
+                    </div>
+                    <div class="price">
+                        <p class="card-text">Best Price:</p>
+                        <h6 class="card-text">{{bestQueryResult.price}} €</h6>
+                    </div>
+                    <div class="link">
+                        <a href={{bestQueryResult.redirectURL}} class="btn btn-primary" target="_blank">Check offer!</a>
+                    </div>
+                </div>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+    <div class="countryDomain result">
+        <div class="card">
+            {{#if bestCountrySpecificResult.availableHB}}
+            <h5 class="card-header">Your country ending <em>{{domainStl}}<strong>{{ipSpecificTld}}</strong></em> is available</h5>
+            {{else}}
+            <h5 class="card-header">Your current country domainName <em>{{domainStl}}<strong>{{ipSpecificTld}}</strong></em> is currently not
+                available.
+            </h5>
+            {{/if}}
+            <div class="card">
+                <div class="card-body">
+                    {{#if bestCountrySpecificResult.availableHB}}
+                    <div class="dealer">
+                        <p class="card-text">Best Dealer:</p>
+                        <h6 class="card-text">{{bestCountrySpecificResult.name}}</h6>
+                    </div>
+                    <div class="price">
+                        <p class="card-text">Best Price:</p>
+                        <h6 class="card-text">{{bestCountrySpecificResult.price}} €</h6>
+                    </div>
+                    <div class="link">
+                        <a href={{bestCountrySpecificResult.redirectURL}} class="btn btn-primary" target="_blank">Check offer!</a>
+                    </div>
+                </div>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="suppliers">
+    <div class="logo">
+        <img src="/img/Gandi.png">
+    </div>
+    <div class="logo">
+        <img src="/img/namesilo.png">
+    </div>
+    <div class="logo">
+        <img src="/img/namecom.png">
+    </div>
+</div>
+<hr class="divider">
+<h1 id="sectionHeader">Alternative ending options:</h1>
+<hr class="divider">
+
+<div class="spinner">
+    <div class="lds-css ng-scope" style="display: block">
+        <div style="width:100%;height:100%" class="lds-double-ring">
+            <div></div>
+            <div></div>
+            <div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+</div>
+<iframe src="/trends?domain={{domainName}}" frameborder="0" width="100%" height="800px"></iframe>
+<script>
+    document.getElementsByTagName('iframe')[0].onload = function spinnerDelete() {
+        document.getElementsByClassName('lds-css')[0].style.display = 'none';
+    }
+    function test() {
+        document.getElementsByClassName('results')[0].style.display = 'none';
+        document.getElementsByClassName('lds-css')[0].style.display = 'block';
+    }
+</script>

@@ -1,0 +1,435 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+@media (max-width: 900px) {
+  .signup {
+    margin-left: 0px !important;
+    margin-top: 5px !important;
+  }
+}
+.navbar {
+  background-color: white !important;
+  display: flex;
+  justify-content: space-between;
+}
+.login {
+  font-weight: 700;
+  background-color: lightgrey;
+  color: black !important;
+  max-width: 120px;
+  text-align: center;
+  border-radius: 8px;
+}
+.signup {
+  font-weight: 700;
+  background-color: #e87a16;
+  color: white !important;
+  max-width: 120px;
+  text-align: center;
+  border-radius: 8px;
+  margin-left: 10px;
+}
+.navbar-brand {
+  color: black;
+  font-size: 25px;
+  font-weight: 800;
+}
+.card-body {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.error-message {
+  background: #36c6ff;
+  box-sizing: border-box;
+  color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  width: 100%;
+}
+
+.landing {
+  padding-top: 5%;
+  width: 100%;
+  background-color: grey;
+  padding-bottom: 5%;
+  margin-bottom: 20px;
+  background-image: url("../img/yong-chuan-VZ_GDBK98FQ-unsplash_small.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.headerMain {
+  max-width: 50%;
+  margin-left: 10%;
+  font-weight: 800;
+  color: lightgrey;
+}
+.headerSub {
+  max-width: 50%;
+  margin-left: 10%;
+  padding-top: 10px;
+  color: lightgrey;
+}
+.userSearchInput {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: 10%;
+  padding-top: 20px;
+}
+.form-group {
+  min-width: 60%;
+}
+.userSearchInput button {
+  max-height: 40px;
+  border: none;
+  background-color: #e87a16;
+  color: white !important;
+  max-width: 120px;
+  text-align: center;
+  border-radius: 6px;
+  margin-left: 10px;
+}
+.userSearchInputNext button {
+  max-height: 40px;
+  border: none;
+  background-color: black;
+  color: white !important;
+  max-width: 120px;
+  text-align: center;
+  border-radius: 6px;
+  margin-left: 10px;
+}
+.suppliers {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100px;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+.logo {
+  width: 30%;
+  border-radius: 6px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 10px;
+}
+.logo img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+@keyframes lds-double-ring {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes lds-double-ring {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes lds-double-ring_reverse {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes lds-double-ring_reverse {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+
+.lds-double-ring {
+  position: relative;
+}
+
+.lds-double-ring div {
+  box-sizing: border-box;
+}
+
+.lds-double-ring > div {
+  position: absolute;
+  width: 168px;
+  height: 168px;
+  top: 16px;
+  left: 16px;
+  border-radius: 50%;
+  border: 8px solid #000;
+  border-color: #fc4309 transparent #fc4309 transparent;
+  -webkit-animation: lds-double-ring 2s linear infinite;
+  animation: lds-double-ring 2s linear infinite;
+}
+
+.lds-double-ring > div:nth-child(2),
+.lds-double-ring > div:nth-child(4) {
+  width: 148px;
+  height: 148px;
+  top: 26px;
+  left: 26px;
+  -webkit-animation: lds-double-ring_reverse 2s linear infinite;
+  animation: lds-double-ring_reverse 2s linear infinite;
+}
+
+.lds-double-ring > div:nth-child(2) {
+  border-color: transparent #ff765c transparent #ff765c;
+}
+
+.lds-double-ring > div:nth-child(3) {
+  border-color: transparent;
+}
+
+.lds-double-ring > div:nth-child(3) div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.lds-double-ring > div:nth-child(3) div:before,
+.lds-double-ring > div:nth-child(3) div:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: -8px;
+  left: 72px;
+  background: #fc4309;
+  border-radius: 50%;
+  box-shadow: 0 160px 0 0 #fc4309;
+}
+
+.lds-double-ring > div:nth-child(3) div:after {
+  left: -8px;
+  top: 72px;
+  box-shadow: 160px 0 0 0 #fc4309;
+}
+
+.lds-double-ring > div:nth-child(4) {
+  border-color: transparent;
+}
+
+.lds-double-ring > div:nth-child(4) div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.lds-double-ring > div:nth-child(4) div:before,
+.lds-double-ring > div:nth-child(4) div:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: -8px;
+  left: 62px;
+  background: #ff765c;
+  border-radius: 50%;
+  box-shadow: 0 140px 0 0 #ff765c;
+}
+
+.lds-double-ring > div:nth-child(4) div:after {
+  left: -8px;
+  top: 62px;
+  box-shadow: 140px 0 0 0 #ff765c;
+}
+
+.lds-double-ring {
+  width: 200px !important;
+  height: 200px !important;
+  -webkit-transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+  transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+}
+.spinner {
+  display: flex;
+  justify-content: center;
+}
+.authLanding {
+  padding-top: 5%;
+  width: 100%;
+  background-color: grey;
+  padding-bottom: 5%;
+  margin-bottom: 20px;
+  background-image: url("../img/yong-chuan-VZ_GDBK98FQ-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.authLanding h3 {
+  color: lightgrey !important;
+}
+.form-signin {
+  flex-wrap: nowrap;
+  margin-left: 10%;
+  padding-top: 20px;
+}
+.form-signin input {
+  max-width: 60%;
+  margin-top: 10px;
+}
+.form-signin button {
+  max-height: 40px;
+  border: none;
+  background-color: #e87a16;
+  color: white !important;
+  text-align: center;
+  border-radius: 6px;
+  margin-top: 10px;
+  max-width: 60%;
+}
+.accountNeeded {
+  margin-left: 10%;
+  margin-top: 20px;
+}
+.accountNeeded h5 {
+  color: lightgrey !important;
+  font-size: 12px !important;
+}
+.accountNeeded a {
+  border: none;
+  background-color: lightgrey;
+  color: black !important;
+  text-align: center;
+  border-radius: 6px;
+  margin-top: 10px;
+  max-width: 30%;
+  width: auto !important;
+  font-size: 12px;
+}
+.dividerOne {
+  width: 92%;
+  margin: 30px auto 20px auto;
+  height: 1px;
+  background-color: #000000;
+}
+#sectionHeader {
+  margin-left: 10%;
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.results {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: 10%;
+  justify-content: space-between;
+  margin-right: 10%;
+  margin-bottom: 1%;
+}
+.result {
+  max-width: 45%;
+}
+h5 em {
+  font-size: bold;
+  color: black;
+}
+.card-header {
+  font-size: 18px;
+  color: grey;
+}
+.card a {
+  max-height: 40px;
+  border: none;
+  background-color: #e87a16;
+  color: white !important;
+  text-align: center;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+.card h6 {
+  font-weight: 800;
+  font-size: bold;
+}
+.card p {
+  text-decoration-line: underline;
+}
+.landingResults {
+  padding-top: 1%;
+  width: 100%;
+  background-color: #e87a16;
+  padding-bottom: 1%;
+}
+.headerResult {
+  max-width: 50%;
+  margin-left: 10%;
+  padding-top: 10px;
+  color: black;
+}
+iframe {
+  margin-left: 10%;
+  max-width: 80% !important;
+}
+.allSearchesResult {
+  margin-left: 10%;
+  max-width: 80%;
+  margin-bottom: 1%;
+}
+.allSearchesHeader {
+  background-color: #e87a16 !important;
+  color: white !important;
+}
+.adminHeader {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center !important;
+}
+.adminResult {
+  margin-left: 10%;
+}
+
+.txtwhite{
+  color: white
+}
+
+.centered{
+  text-align: center;
+}
+
+.bgcl{
+  background-color: white;
+  color: #000;
+}
+
+.bgclor{
+  color: #e67a29
+}
+
+.bgfooter{
+  background-color: #d3d3d3;
+  color: #787878
+}
+
+
